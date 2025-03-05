@@ -18,11 +18,21 @@ const Planet: React.FC<PlanetProps> = ({ planet, isSelected, onClick }) => {
   const texture = useTexture(`/textures/${planet.texture}`)
 
   // Self-rotation
-  useFrame((_, delta) => {
+  useFrame(({ clock }) => {
     if (meshRef.current && !isSelected) {
-      meshRef.current.rotation.y += delta * planet.rotationSpeed
+      // Calculate the new orbit position
+      const angle = (clock.getElapsedTime() / planet.orbitSpeed) % (Math.PI * 2)
+      const x = Math.cos(angle) * planet.orbitRadius
+      const z = Math.sin(angle) * planet.orbitRadius
+  
+      // Update the position dynamically
+      meshRef.current.position.set(x, 0, z)
+  
+      // Self-rotation
+      meshRef.current.rotation.y += planet.rotationSpeed * 0.01
     }
   })
+  
 
   return (
     <mesh
