@@ -61,7 +61,16 @@ const PlanetSystem: React.FC<PlanetSystemProps> = ({ selectedPlanet, onPlanetCli
       <mesh position={[0, 0, 0]}>
         <sphereGeometry args={[5, 32, 32]} />
         <meshStandardMaterial map={sunTexture} emissive="#FFD046" emissiveIntensity={0.8} />
+        <pointLight   
+          position={[0, 0, 0]} 
+          intensity={1000} // Adjust brightness
+          distance={10000} // Controls how far the light reaches
+          decay={2} // How quickly light fades
+          castShadow
+        />
       </mesh>
+
+      {/* 🔆 Sunlight: PointLight at the Sun's position */}
 
       {/* Orbit lines */}
       {planetData.map((planet) => (

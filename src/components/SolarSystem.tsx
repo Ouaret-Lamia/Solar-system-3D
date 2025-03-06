@@ -24,8 +24,8 @@ const SolarSystem: React.FC = () => {
     <div className="w-full h-screen relative">
       <Canvas camera={{ position: [0, 20, 70], fov: 60 }}>
         <ambientLight intensity={0.3} />
-        <directionalLight position={[-180, 0, 0]} intensity={1.0} />
-        <pointLight position={[0, 0, 0]} intensity={10} color="white" />
+        {/* <directionalLight position={[-180, 0, 0]} intensity={1.0} /> */}
+        <pointLight position={[0, 0, 0]} intensity={1} color="white" />
         <PlanetSystem selectedPlanet={selectedPlanet} onPlanetClick={handlePlanetClick} controlsRef={controlsRef} />
         <Stars radius={400} depth={100} count={1500} factor={2} />
         <OrbitControls
