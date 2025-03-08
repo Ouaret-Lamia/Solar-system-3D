@@ -1,5 +1,3 @@
-"use client"
-
 import type React from "react"
 import { useRef, useEffect } from "react"
 import { useFrame } from "@react-three/fiber"
@@ -70,8 +68,6 @@ const PlanetSystem: React.FC<PlanetSystemProps> = ({ selectedPlanet, onPlanetCli
         />
       </mesh>
 
-      {/* 🔆 Sunlight: PointLight at the Sun's position */}
-
       {/* Orbit lines */}
       {planetData.map((planet) => (
         <line key={`orbit-${planet.name}`}>
@@ -90,7 +86,7 @@ const PlanetSystem: React.FC<PlanetSystemProps> = ({ selectedPlanet, onPlanetCli
               itemSize={3}
             />
           </bufferGeometry>
-          <lineBasicMaterial attach="material" color="#666666" opacity={0.3} transparent />
+          <lineBasicMaterial attach="material" color="#666666" opacity={0.1} transparent />
         </line>
       ))}
 
