@@ -7,13 +7,15 @@ import { Stars, OrbitControls } from "@react-three/drei"
 import PlanetSystem from "./PlanetSystem"
 import PlanetInfo from "./PlanetInfo"
 import { planetData } from "../data/PlanetData"
+import { useNavigate } from "react-router-dom"
 
 const SolarSystem: React.FC = () => {
   const [selectedPlanet, setSelectedPlanet] = useState<string | null>(null)
   const controlsRef = useRef(null)
+  const navigate = useNavigate()
 
   const handlePlanetClick = (planetName: string) => {
-    setSelectedPlanet(planetName === selectedPlanet ? null : planetName)
+    navigate(`/planet/${planetName}`) 
   }
 
   const handleReturnToView = () => {
