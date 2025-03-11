@@ -1,5 +1,3 @@
-"use client"
-
 import { useTexture } from "@react-three/drei"
 import { Canvas } from "@react-three/fiber"
 import { useParams } from "react-router-dom"
