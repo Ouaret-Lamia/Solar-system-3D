@@ -10,7 +10,7 @@ interface PlanetProps {
   onClick: () => void
 }
 
-const Planet: React.FC<PlanetProps> = ({ planet, isSelected = null, onClick }) => {
+const Planet: React.FC<PlanetProps> = ({ planet, isSelected, onClick }) => {
   const meshRef = useRef<THREE.Mesh>(null)
   const ringRef = useRef<THREE.Mesh>(null)
   const texture = useTexture(`/textures/${planet.texture}`)

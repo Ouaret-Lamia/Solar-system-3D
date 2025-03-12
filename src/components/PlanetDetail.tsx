@@ -21,12 +21,12 @@ const PlanetDetail = () => {
       </Canvas>
 
       {/* Planet Description */}
-      {/* <div className="absolute inset-0 flex items-center justify-center bg-black bg-opacity-50 text-white p-4">
-        <div className="max-w-lg text-center">
+      <div className="absolute inset-0 bg-transparent bg-opacity-10 text-white p-15">
+        <div className="max-w-lg">
           <h1 className="text-4xl font-bold mb-4">{planet.name}</h1>
           <p>{planet.description}</p>
         </div>
-      </div> */}
+      </div>
     </div>
   )
 }
