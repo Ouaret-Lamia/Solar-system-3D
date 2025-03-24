@@ -26,6 +26,12 @@ const PlanetDetail = () => {
           <h1 className = "text-4xl font-bold mb-4">{planet.name}</h1>
           <p>{planet.description}</p>
         </div>
+        <div>
+          <video controls className="w-full rounded-lg shadow-lg">
+            <source src={`/videos/${planet.name.toLowerCase()}.mp4`} type="video/mp4" />
+            Your browser does not support the video tag.
+          </video>
+        </div>
       </div>
     </div>
   )
