@@ -18,7 +18,7 @@ export interface PlanetData {
 export const planetData: PlanetData[] = [
   {
     name: "Mercure",
-    texture: "mercury.jpg",
+    texture: "mercure.jpg",
     size: 0.8,
     orbitRadius: 10,
     orbitSpeed: 5,
@@ -28,13 +28,13 @@ export const planetData: PlanetData[] = [
     dayLength: "58,6 jours terrestres",
     yearLength: "88 jours terrestres",
     description:
-      "Mercure est la planète la plus proche du Soleil et la plus petite du Système solaire. En raison de l'absence quasi totale d'atmosphère, elle subit des variations extrêmes de température entre le jour et la nuit. Sa surface est recouverte de cratères d'impact, rappelant celle de la Lune. Sa proximité avec le Soleil lui confère une orbite très rapide, complétant une révolution en seulement 88 jours terrestres.",
+      "Mercure est la planète la plus proche du Soleil et également la plus petite du Système solaire. Sa surface est couverte de cratères, résultant d’impacts météoritiques survenus au fil des milliards d’années. Son absence d’atmosphère significative empêche la rétention de la chaleur, entraînant des températures extrêmes : jusqu’à 430°C en journée et -180°C la nuit. En raison de sa proximité avec le Soleil, elle subit également un effet de marée gravitationnelle qui ralentit considérablement sa rotation, rendant ses jours très longs par rapport à son année.",
     composition:
-      "Planète rocheuse avec un noyau métallique très dense qui représente environ 60 % de sa masse.",
+      "Mercure est une planète rocheuse avec un noyau métallique extrêmement dense, représentant environ 60 % de sa masse totale. Sa croûte est composée principalement de silicates, et il est probable qu’elle ait autrefois possédé une activité volcanique. Cependant, contrairement à la Terre, elle ne présente aucune tectonique des plaques, ce qui a figé sa surface depuis des milliards d’années.",
     moons: 0,
   },
   {
-    name: "Vénus",
+    name: "Venus",
     texture: "venus.jpg",
     size: 1.5,
     orbitRadius: 15,
@@ -45,14 +45,14 @@ export const planetData: PlanetData[] = [
     dayLength: "243 jours terrestres",
     yearLength: "225 jours terrestres",
     description:
-      "Vénus est la deuxième planète du Système solaire et la plus chaude en raison de son atmosphère extrêmement dense composée principalement de dioxyde de carbone. Elle produit un effet de serre puissant, faisant grimper sa température de surface à environ 467°C. Sa rotation est très lente et rétrograde, ce qui signifie qu'elle tourne sur elle-même en sens inverse de la plupart des planètes.",
+      "Vénus est souvent surnommée la 'sœur jumelle' de la Terre en raison de sa taille similaire, mais elle est en réalité un monde infernal. Son atmosphère dense est composée principalement de dioxyde de carbone, créant un effet de serre extrême qui maintient des températures de surface avoisinant les 467°C, ce qui en fait la planète la plus chaude du Système solaire. Sa pression atmosphérique est environ 92 fois celle de la Terre, rendant son environnement totalement inhospitalier. De plus, elle tourne sur elle-même très lentement et dans le sens inverse de la plupart des autres planètes, un phénomène unique dans notre Système solaire.",
     composition:
-      "Planète rocheuse avec une atmosphère épaisse composée de dioxyde de carbone et de nuages de soufre.",
+      "Vénus est une planète rocheuse recouverte de vastes plaines volcaniques et de montagnes. Son atmosphère épaisse est constituée principalement de dioxyde de carbone, avec des nuages composés d’acide sulfurique. On pense que la planète a subi un effet de serre incontrôlable, ayant peut-être eu un passé plus tempéré avant que son atmosphère ne devienne aussi dense et étouffante.",
     moons: 0,
   },
   {
     name: "Terre",
-    texture: "earth.jpg",
+    texture: "terre.jpg",
     size: 1.5,
     orbitRadius: 20,
     orbitSpeed: 10,
@@ -62,9 +62,9 @@ export const planetData: PlanetData[] = [
     dayLength: "24 heures",
     yearLength: "365,25 jours",
     description:
-      "La Terre est la seule planète connue pour abriter la vie. Elle possède une atmosphère riche en oxygène et en azote, ainsi qu’une surface recouverte à 71 % d’eau. Son climat et sa géologie sont en grande partie façonnés par l'interaction entre l'atmosphère, l'hydrosphère et la lithosphère.",
+      "La Terre est la seule planète connue à abriter la vie. Sa biosphère riche et diversifiée est rendue possible grâce à une atmosphère stable composée principalement d’azote et d’oxygène. Sa surface est recouverte à 71 % d’eau, jouant un rôle clé dans la régulation du climat et dans le développement de la vie. La Terre possède également un champ magnétique puissant, qui la protège des radiations solaires et des vents cosmiques.",
     composition:
-      "Planète rocheuse avec un noyau métallique et une croûte principalement composée de silicates.",
+      "Planète tellurique avec une structure interne bien différenciée, la Terre est constituée d’un noyau métallique interne et externe, d’un manteau de roches en fusion et d’une croûte solide. Son atmosphère est composée à environ 78 % d’azote et 21 % d’oxygène, favorisant la respiration et le développement de la vie.",
     moons: 1,
     notableMoons: "La Lune",
   },
@@ -80,9 +80,9 @@ export const planetData: PlanetData[] = [
     dayLength: "24,6 heures",
     yearLength: "687 jours terrestres",
     description:
-      "Surnommée la 'planète rouge' en raison de la présence d’oxyde de fer à sa surface, Mars est une planète froide et désertique. Son atmosphère ténue ne permet pas de retenir beaucoup de chaleur, ce qui entraîne des températures glaciales. Elle est la cible principale des explorations spatiales en raison de la possibilité qu’elle ait abrité de l’eau liquide dans le passé.",
+      "Mars est souvent appelée la 'planète rouge' en raison de sa surface recouverte de poussière d’oxyde de fer, lui donnant sa couleur caractéristique. C’est une planète froide et désertique avec une fine atmosphère composée principalement de dioxyde de carbone. Les scientifiques s’y intéressent particulièrement car elle présente des indices d’eau gelée sous sa surface et dans ses calottes polaires, faisant d’elle une candidate idéale pour la recherche de vie passée.",
     composition:
-      "Planète rocheuse avec une atmosphère mince composée principalement de dioxyde de carbone.",
+      "Mars est une planète rocheuse dont la surface est recouverte de dunes, de vallées et d’anciens lits de rivières asséchés. Son atmosphère est extrêmement mince et incapable de retenir la chaleur. Elle contient en majorité du dioxyde de carbone, rendant la planète inhospitalière pour la vie humaine sans protection.",
     moons: 2,
     notableMoons: "Phobos et Deimos",
   },
@@ -98,15 +98,15 @@ export const planetData: PlanetData[] = [
     dayLength: "9,9 heures",
     yearLength: "11,9 ans terrestres",
     description:
-      "Jupiter est la plus grande planète du Système solaire. C'est une géante gazeuse composée principalement d'hydrogène et d'hélium. Elle est célèbre pour sa grande tache rouge, une immense tempête qui dure depuis des siècles. Elle possède un puissant champ magnétique et un vaste système de lunes.",
+      "Jupiter est la plus grande planète du Système solaire et est principalement composée de gaz. Elle est célèbre pour sa Grande Tache Rouge, une immense tempête qui dure depuis des siècles. Son puissant champ magnétique en fait une planète intrigante et mystérieuse, et certaines de ses lunes, comme Europe, pourraient abriter des océans sous leur surface glacée.",
     composition:
-      "Géante gazeuse composée principalement d’hydrogène et d’hélium, avec un noyau rocheux probable.",
+      "Jupiter est constituée essentiellement d’hydrogène et d’hélium, sans véritable surface solide. Son noyau pourrait être rocheux, entouré de couches d’hydrogène métallique liquide et de gaz en perpétuelle turbulence.",
     moons: 79,
     notableMoons: "Io, Europe, Ganymède et Callisto",
   },
   {
     name: "Saturne",
-    texture: "saturn.jpg",
+    texture: "saturne.jpg",
     size: 3,
     orbitRadius: 45,
     orbitSpeed: 25,
@@ -116,9 +116,9 @@ export const planetData: PlanetData[] = [
     dayLength: "10,7 heures",
     yearLength: "29,5 ans terrestres",
     description:
-      "Saturne est célèbre pour son système d'anneaux spectaculaires composés de glace et de poussière. C'est une planète géante gazeuse similaire à Jupiter, mais avec une densité si faible qu'elle pourrait flotter sur l'eau. Ses anneaux sont les plus brillants et étendus du Système solaire.",
+      "Saturne est célèbre pour son magnifique système d’anneaux composés de glace et de roches. C’est la deuxième plus grande planète du Système solaire et elle possède un grand nombre de lunes, dont Titan, qui est une des seules lunes connues à avoir une atmosphère dense.",
     composition:
-      "Géante gazeuse composée principalement d’hydrogène et d’hélium, avec un noyau rocheux.",
+      "Comme Jupiter, Saturne est une géante gazeuse principalement composée d’hydrogène et d’hélium. Ses anneaux sont constitués de milliards de particules de glace et de roche, allant de la taille d’un grain de sable à celle d’une montagne.",
     moons: 82,
     notableMoons: "Titan, Encelade, Mimas, Téthys, Dioné et Rhéa",
   },
@@ -136,7 +136,7 @@ export const planetData: PlanetData[] = [
     description:
       "Uranus est une planète unique car elle tourne sur le côté, probablement à la suite d'une collision avec un objet massif dans le passé. Son atmosphère contient du méthane, ce qui lui donne une couleur bleu-vert distincte. C’est une géante de glace avec un intérieur riche en eau, en ammoniaque et en méthane.",
     composition:
-      "Géante de glace composée principalement d’eau, de méthane et d’ammoniac au-dessus d’un noyau rocheux.",
+      "C’est une géante de glace composée principalement d’eau, de méthane et d’ammoniac. Son noyau est probablement rocheux.",
     moons: 27,
     notableMoons: "Miranda, Ariel, Umbriel, Titania et Obéron",
   },

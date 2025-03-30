@@ -66,7 +66,7 @@ const PlanetBackground = ({ planet }: { planet: any }) => {
       </mesh>
 
       {/* Saturn's Ring */}
-      {planet.name === "Saturn" && (
+      {planet.name === "Saturne" && (
         <mesh ref={ringRef} rotation={[-Math.PI / 2.2, -0.32, 2]}>
           <torusGeometry args={[7, 1, 2, 100]} />
           <meshStandardMaterial 

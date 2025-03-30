@@ -45,7 +45,7 @@ const Planet: React.FC<PlanetProps> = ({ planet, isSelected, onClick }) => {
       </mesh>
 
       {/* Saturn's Ring (Only for Saturn) */}
-      {planet.name === "Saturn" && (
+      {planet.name === "Saturne" && (
         <mesh ref={ringRef} rotation={[Math.PI / 2, 0, 0]}>
           <torusGeometry args={[planet.size * 1.8, 0.5, 2, 100]} />
           <meshStandardMaterial 
