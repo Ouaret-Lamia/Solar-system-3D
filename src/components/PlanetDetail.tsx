@@ -23,8 +23,11 @@ const PlanetDetail = () => {
       {/* Planet Description */}
       <div className = "grid grid-cols-2 absolute inset-0 bg-transparent bg-opacity-10 text-white p-15">
         <div className = "max-w-lg">
-          <h1 className = "text-4xl font-bold mb-4">{planet.name}</h1>
-          <p>{planet.description}</p>
+          <h1 className = "text-5xl font-bold mb-4 text-center">{planet.name}</h1><br/>
+          <h3 className = "text-2xl font-bold mb-4">Description :</h3>
+          <p>{planet.description}</p><br/>
+          <h3 className = "text-2xl font-bold mb-4">Composition :</h3>
+          <p>{planet.composition}</p>
         </div>
         <div>
           <video controls className="w-full rounded-lg shadow-lg">
