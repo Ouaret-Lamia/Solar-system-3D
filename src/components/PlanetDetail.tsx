@@ -46,14 +46,31 @@ const PlanetDetail = () => {
           
           <h3 className="text-2xl font-bold mb-2">Composition :</h3>
           <p className="mb-4">{planet.composition}</p>
+
+          
         </div>
 
         {/* Video */}
         <div className="flex justify-center row-span-2">
-          <video controls className="w-full max-w-md shadow-lg fixed">
+          {/* <video controls className="w-full max-w-md shadow-lg fixed">
             <source src={`/videos/${planet.name.toLowerCase()}.mp4`} type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+          </video> */}
+        </div>
+        
+        {/* Photo Gallery */}
+        <div className="col-span-2 mt-10">
+          <h3 className="text-3xl font-bold mb-6 text-white text-center">Galerie de Photos</h3>
+          <div className="columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
+            {[1, 2, 3, 4, 5].map((index) => (
+              <img
+                key={index}
+                src={`/images/${planet.name.toLowerCase()}/${planet.name.toLowerCase()}-${index}.png`}
+                alt={`${planet.name} photo ${index}`}
+                className="w-full rounded-lg shadow-md"
+              />
+            ))}
+          </div>
         </div>
       </div>
     </div>
