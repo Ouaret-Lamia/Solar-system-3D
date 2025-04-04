@@ -58,7 +58,7 @@ const PlanetSystem: React.FC<PlanetSystemProps> = ({ selectedPlanet, onPlanetCli
       {/* Sun */}
       <mesh position={[0, 0, 0]}>
         <sphereGeometry args={[5, 32, 32]} />
-        <meshStandardMaterial map={sunTexture} emissive="#FFD046" emissiveIntensity={0.8} />
+        <meshStandardMaterial map={sunTexture} emissive="#FFD046" emissiveIntensity={0.2} />
         <pointLight   
           position={[0, 0, 0]} 
           intensity={1000} // Adjust brightness
