@@ -23,7 +23,7 @@ const PlanetDetail = () => {
       </div>
 
       {/* Scrollable content */}
-      <div className="px-25 py-10 grid grid-cols-1 md:grid-cols-2 gap-12 bg-black/40">
+      <div className="px-25 py-10 grid grid-cols-1 md:grid-cols-2 gap-5 bg-black/40">
         <div className="col-span-2">
           <h1 className="text-6xl font-bold mb-6 text-center">{planet.name}</h1>
         </div>
@@ -52,10 +52,10 @@ const PlanetDetail = () => {
 
         {/* Video */}
         <div className="flex justify-center row-span-2">
-          {/* <video controls className="w-full max-w-md shadow-lg fixed">
+          <video controls className="w-full max-w-md shadow-lg fixed">
             <source src={`/videos/${planet.name.toLowerCase()}.mp4`} type="video/mp4" />
             Your browser does not support the video tag.
-          </video> */}
+          </video>
         </div>
         
         {/* Photo Gallery */}
