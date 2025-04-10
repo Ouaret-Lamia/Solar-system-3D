@@ -40,6 +40,16 @@ const PlanetDetail = () => {
           
           <h3 className="text-2xl font-bold mb-2">Durée de l'année :</h3>
           <p className="mb-4">{planet.yearLength}</p>
+
+          <h3 className="text-2xl font-bold mb-2">Nombre de lunes :</h3>
+          <p className="mb-4">{planet.moons}</p>
+
+          {planet.notableMoons ?
+            <div>
+              <h3 className="text-2xl font-bold mb-2">Lunes connues :</h3>
+              <p className="mb-4">{planet.notableMoons}</p>
+            </div>
+          :""}
           
           <h3 className="text-2xl font-bold mb-2">Description :</h3>
           <p className="mb-4">{planet.description}</p>
@@ -51,12 +61,15 @@ const PlanetDetail = () => {
         </div>
 
         {/* Video */}
-        <div className="flex justify-center row-span-2">
-          <video controls className="w-full max-w-md shadow-lg fixed">
-            <source src={`/videos/${planet.name.toLowerCase()}.mp4`} type="video/mp4" />
-            Your browser does not support the video tag.
-          </video>
+        <div className="flex justify-center items-start">
+          <div className="sticky top-40">
+            <video controls className="w-full max-w-md shadow-lg">
+              <source src={`/videos/${planet.name.toLowerCase()}.mp4`} type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+          </div>
         </div>
+
         
         {/* Photo Gallery */}
         <div className="col-span-2 mt-10">

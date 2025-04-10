@@ -7,6 +7,8 @@ import PlanetInfo from "./PlanetInfo"
 import { planetData } from "../data/PlanetData"
 import { useNavigate } from "react-router-dom"
 
+import SolarChatbot from "./SolarChat"
+
 const SolarSystem: React.FC = () => {
   const [selectedPlanet, setSelectedPlanet] = useState<string | null>(null)
   const controlsRef = useRef(null)
@@ -48,6 +50,9 @@ const SolarSystem: React.FC = () => {
           <p>Click on any planet to zoom in and learn more about it.</p>
         </div>
       )}
+
+      <SolarChatbot/>
+
     </div>
   )
 }
