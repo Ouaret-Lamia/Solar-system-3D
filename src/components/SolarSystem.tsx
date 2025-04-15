@@ -1,10 +1,8 @@
 import type React from "react"
-import { useState, useRef } from "react"
+import { useState, useRef, useEffect } from "react"
 import { Canvas } from "@react-three/fiber"
 import { Stars, OrbitControls } from "@react-three/drei"
 import PlanetSystem from "./PlanetSystem"
-import PlanetInfo from "./PlanetInfo"
-import { planetData } from "../data/PlanetData"
 import { useNavigate } from "react-router-dom"
 
 import SolarChatbot from "./SolarChat"
@@ -18,9 +16,15 @@ const SolarSystem: React.FC = () => {
     navigate(`/planet/${planetName}`) 
   }
 
-  const handleReturnToView = () => {
-    setSelectedPlanet(null)
-  }
+  const [visible, setVisible] = useState(true)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setVisible(prev => !prev)
+    }, 7000) // affiche/masque toutes les 7 secondes
+
+    return () => clearInterval(interval)
+  }, [])
 
   return (
     <div className="w-full h-screen relative">
@@ -40,17 +44,20 @@ const SolarSystem: React.FC = () => {
         />
       </Canvas>
 
-      {selectedPlanet && (
-        <PlanetInfo planet={planetData.find((p) => p.name === selectedPlanet)!} onClose={handleReturnToView} />
-      )}
-
       {!selectedPlanet && (
-        <div className="absolute top-4 left-4 text-white bg-black bg-opacity-50 p-4 rounded-lg max-w-xs">
-          <h2 className="text-xl font-bold mb-2">Interactive Solar System</h2>
-          <p>Click on any planet to zoom in and learn more about it.</p>
+        <div
+          className={`
+            absolute top-4 left-4 text-white bg-[#282828] bg-opacity-50 p-4 rounded-lg max-w-xs
+            transition-all duration-1000 ease-in-out
+            transform
+            ${visible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-70"}
+          `}
+        >
+          <h2 className="text-xl font-bold mb-2">Système Solaire Interactif</h2>
+          <p>Cliquez sur une planète pour zoomer et en apprendre plus à son sujet.</p>
         </div>
       )}
-
+      
       <SolarChatbot/>
 
     </div>
